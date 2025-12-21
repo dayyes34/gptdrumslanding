@@ -1,0 +1,392 @@
+.marqueeContainer {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  contain: layout;
+  mask-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+@media (max-width: 768px) {
+  .marqueeContainer {
+    margin: 0rem 0 !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1.5rem 0;
+  }
+}
+
+
+
+.marqueeContent {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: fit-content;
+  animation: marquee 60s linear infinite;
+
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.blockWrapper {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sequencerBlock {
+  border-radius: 2px;
+  padding: 12px 0;
+  width: 300px;
+  box-sizing: border-box;
+
+  border: none;
+  position: relative;
+
+}
+
+.sequencerHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.blockInfo {
+  pointer-events: auto;
+  margin-left: calc(50% - (4 * 60px + 3 * 2px) / 2);
+  position: relative;
+}
+
+.blockNumber {
+  font-weight: 500;
+  white-space: nowrap;
+  color: #E0E0E0;
+  font-size: 0.9rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 0;
+}
+
+.trackRow {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  user-select: none;
+  position: relative;
+}
+
+.trackRowNoLabel {
+  justify-content: center;
+}
+
+.trackLabel {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  min-width: 24px;
+  padding: 2px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.cellsWrapper {
+  display: flex;
+  gap: 2px;
+  width: calc(4 * 60px + 3 * 2px);
+  justify-content: flex-start;
+  
+}
+
+.gridCell {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: default;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: none;
+
+}
+
+.cellTrackText {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.85;
+  transform: scale(1);
+}
+
+.gridCell.active {
+  background: transparent;
+  
+}
+
+/* Цвета для активных ячеек по трекам */
+.gridCell.active.track-R {
+  background: rgba(139, 30, 34, 0.85);
+}
+
+.gridCell.active.track-L {
+  background: rgba(16, 98, 101, 0.85);
+}
+
+.gridCell.active.track-RF {
+  background: rgba(128, 8, 82, 0.85);
+  
+}
+
+.gridCell.active.track-LF {
+  background: rgba(136, 87, 3, 0.85);
+}
+
+/* Обводка для ячеек с акцентами */
+.gridCell.active[data-instrument-id*="_accent"] {
+  border: 2px solid currentColor !important;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Специфичные цвета обводки для акцентов по трекам */
+.gridCell.active.track-R[data-instrument-id*="_accent"] {
+  border: 2px solid #FF4A50 !important;
+  box-shadow: 0 0 8px rgba(255, 74, 80, 0.5) !important;
+}
+
+.gridCell.active.track-L[data-instrument-id*="_accent"] {
+  border: 2px solid #2DD2D8 !important;
+  box-shadow: 0 0 8px rgba(45, 210, 216, 0.5) !important;
+}
+
+/* Обводка для проигрываемых акцентных ячеек */
+.gridCell.playingActive[data-instrument-id*="_accent"] {
+  border: 2px solid currentColor !important;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3) !important;
+}
+
+.gridCell.playingActive.track-R[data-instrument-id*="_accent"] {
+  border: 2px solid #FF4A50 !important;
+  box-shadow: 0 0 8px rgba(255, 74, 80, 0.5) !important;
+}
+
+.gridCell.playingActive.track-L[data-instrument-id*="_accent"] {
+  border: 2px solid #2DD2D8 !important;
+  box-shadow: 0 0 8px rgba(45, 210, 216, 0.5) !important;
+}
+
+/* Подсветка проигрываемых шагов */
+.gridCell.playingActive {
+  z-index: 20;
+  transition: none;
+}
+
+/* Подсветка для пустых ячеек на текущем шаге (не трогаем активные удары) */
+.gridCell.playingActive:not(.active) {
+  background: rgba(255, 255, 255, 0.35);
+
+}
+
+.gridCell.playingActive .cellTrackText {
+  animation: text-pulse 0.15s 1 ease-out;
+}
+
+/* Анимация пульсации для букв */
+@keyframes text-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.gridCell.playingActive.track-R {
+  background: rgba(255, 137, 140, 0.5) !important;
+}
+
+.gridCell.playingActive.track-L {
+  background: rgba(150, 232, 235, 0.5) !important;
+}
+
+.gridCell.playingActive.track-RF {
+  background: rgba(238, 133, 194, 0.5) !important;
+}
+
+.gridCell.playingActive.track-LF {
+  background: rgba(254, 206, 132, 0.5) !important;
+}
+
+.gridCell.playingEmpty {
+  z-index: 10;
+  transition: none;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Responsive */
+@media (min-width: 769px) {
+  .marqueeContainer {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .sequencerBlock {
+    width: 240px;
+  }
+
+  .gridCell {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cellsWrapper {
+    width: calc(4 * 48px + 3 * 2px);
+  }
+
+  .trackRow {
+    height: 48px;
+  }
+
+  .blockInfo {
+    margin-left: calc(50% - (4 * 48px + 3 * 2px) / 2);
+  }
+
+  .cellTrackText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sequencerBlock {
+    width: 200px;
+  }
+
+  .gridCell {
+    width: 45px;
+    height: 45px;
+  }
+
+  .cellsWrapper {
+    width: calc(4 * 45px + 3 * 2px);
+  }
+
+  .trackRow {
+    height: 45px;
+  }
+
+  .blockInfo {
+    margin-left: calc(50% - (4 * 45px + 3 * 2px) / 2);
+  }
+
+  .marqueeContent {
+    gap: 1.5rem;
+  }
+
+  .cellTrackText {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marqueeContainer {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+  }
+
+  .sequencerBlock {
+    width: 160px;
+  }
+
+  .gridCell {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cellsWrapper {
+    width: calc(4 * 36px + 3 * 2px);
+  }
+
+  .trackRow {
+    height: 36px;
+  }
+
+  .blockInfo {
+    margin-left: calc(50% - (4 * 36px + 3 * 2px) / 2);
+  }
+
+  .blockNumber {
+    font-size: 0.7rem;
+  }
+
+  .marqueeContent {
+    gap: 1rem;
+  }
+
+  .cellTrackText {
+    font-size: 12px;
+  }
+}
+

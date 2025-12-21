@@ -4,8 +4,9 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: '40px 20px', background: '#000427', position: 'relative', zIndex: 1 }}>
-      {/* Заголовок */}
+    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #010319 0%, #0F1347 100%)', position: 'relative', zIndex: 15 }}>
+      <div style={{ padding: '40px 20px' }}>
+        {/* Заголовок */}
       <h2
         style={{
           color: 'white',
@@ -512,6 +513,7 @@ export default function About() {
             Всегда с тобой
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
