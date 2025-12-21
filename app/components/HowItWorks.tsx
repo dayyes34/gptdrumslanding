@@ -356,7 +356,7 @@ export default function HowItWorks() {
               justifyContent: 'center',
               alignItems: 'center',
               marginTop: '-3rem',
-              marginBottom: '5rem',
+              marginBottom: '-4rem',
               marginLeft: '-20px',
               padding: '0 1rem',
               width: '100%',

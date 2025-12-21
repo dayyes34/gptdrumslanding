@@ -4,6 +4,8 @@ import About from './components/About'
 import BeforeAfter from './components/BeforeAfter'
 import HowItWorks from './components/HowItWorks'
 import AI from './components/AI'
+import GetStarted from './components/GetStarted'
+import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import FAQ from './components/FAQ'
 
@@ -16,6 +18,8 @@ export default function Home() {
       <BeforeAfter />
       <HowItWorks />
       <AI />
+      <GetStarted />
+      <Pricing />
       <CTA />
       <FAQ />
     </main>
