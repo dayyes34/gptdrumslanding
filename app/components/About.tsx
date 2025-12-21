@@ -4,8 +4,48 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #010319 0%, #0F1347 100%)', position: 'relative', zIndex: 15 }}>
-      <div style={{ padding: '40px 20px' }}>
+    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #010319 0%, #0F1347 100%)', position: 'relative', zIndex: 1 }}>
+      {/* SVG волна сверху секции как шапка (перевернутая для стыковки) */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          lineHeight: 0,
+          zIndex: 0,
+          marginTop: '-100px',
+          transform: 'scaleY(-1)',
+        }}
+      >
+        <svg
+          viewBox="0 0 1440 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          style={{
+            width: '100%',
+            height: '300px',
+            display: 'block',
+           
+          }}
+        >
+          <defs>
+            <linearGradient id="waveGradientAbout" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="rgba(255, 255, 255)" />
+              <stop offset="29%" stopColor="#90d2f5" />
+              <stop offset="45%" stopColor="rgba(129, 190, 222)" />
+              <stop offset="55%" stopColor="#81BEDE" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,50 C240,65 480,35 720,50 C960,65 1200,35 1440,50 L1440,120 L0,120 Z"
+            fill="url(#waveGradientAbout)"
+          />
+        </svg>
+      </div>
+
+      <div style={{ padding: '40px 20px', position: 'relative', zIndex: 2, paddingTop: '300px' }}>
         {/* Заголовок */}
       <h2
         style={{

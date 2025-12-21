@@ -282,8 +282,8 @@ export default function HowItWorks() {
         </div>
         
         <div style={{ padding: '0px 20px 0 20px' }}>
-        {/* Звездочки */}
-        <div className="stars">
+        {/* Звездочки - выключены */}
+        {/* <div className="stars">
           {FIXED_STARS.map((star) => (
             <span key={star.id} className="star" style={{
               left: `${star.left}%`,
@@ -292,7 +292,7 @@ export default function HowItWorks() {
               transform: `rotate(${star.rotation}deg)`
             }}>✦</span>
           ))}
-        </div>
+        </div> */}
         
         <div
           style={{

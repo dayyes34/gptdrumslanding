@@ -11,7 +11,7 @@ export default function WhyGptDrums() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(to bottom, #BFE0F6 0%, #344251 100%)',
+          background: 'linear-gradient(to bottom, #BFE0F6 0%, #8FBDDB 100%)',
           zIndex: 2,
         }}
       />
