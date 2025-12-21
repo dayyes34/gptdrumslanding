@@ -44,6 +44,10 @@ body {
   min-height: 100vh;
 }
 
+html {
+  background: #000427;
+}
+
 #hero {
   display: flex;
   flex-direction: column;
