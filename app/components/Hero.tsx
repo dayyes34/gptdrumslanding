@@ -248,18 +248,29 @@ export default function Hero() {
                     gap: '8px',
                   }}
                 >
-                  <Image
-                    src="/15min.webp"
-                    alt="Всего 15 минут"
-                    width={90}
-                    height={90}
+                  <div
                     style={{
                       width: '45px',
                       height: '50px',
-                      objectFit: 'contain',
-                      filter: 'drop-shadow(0 0 10px rgba(88, 192, 226, 0.6)) drop-shadow(0 0 20px rgba(88, 192, 226, 0.4))',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
+                      borderRadius: '8px',
                     }}
-                  />
+                  >
+                    <Image
+                      src="/15min.webp"
+                      alt="Всего 15 минут"
+                      width={90}
+                      height={90}
+                      style={{
+                        width: '45px',
+                        height: '50px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </div>
                   <span
                     style={{
                       fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
@@ -283,18 +294,29 @@ export default function Hero() {
                     gap: '8px',
                   }}
                 >
-                  <Image
-                    src="/11k.webp"
-                    alt="10000+ drummers"
-                    width={95}
-                    height={95}
+                  <div
                     style={{
                       width: '50px',
                       height: '50px',
-                      objectFit: 'contain',
-                      filter: 'drop-shadow(0 0 10px rgba(88, 192, 226, 0.6)) drop-shadow(0 0 20px rgba(88, 192, 226, 0.4))',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
+                      borderRadius: '8px',
                     }}
-                  />
+                  >
+                    <Image
+                      src="/11k.webp"
+                      alt="10000+ drummers"
+                      width={95}
+                      height={95}
+                      style={{
+                        width: '50px',
+                        height: '50px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </div>
                   <span
                     style={{
                       fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
@@ -319,18 +341,29 @@ export default function Hero() {
                     gap: '8px',
                   }}
                 >
-                  <Image
-                    src="/aipowered.webp"
-                    alt="AI Powered"
-                    width={95}
-                    height={95}
+                  <div
                     style={{
                       width: '49px',
                       height: '50px',
-                      objectFit: 'contain',
-                      filter: 'drop-shadow(0 0 10px rgba(88, 192, 226, 0.6)) drop-shadow(0 0 20px rgba(88, 192, 226, 0.4))',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
+                      borderRadius: '8px',
                     }}
-                  />
+                  >
+                    <Image
+                      src="/aipowered.webp"
+                      alt="AI Powered"
+                      width={95}
+                      height={95}
+                      style={{
+                        width: '49px',
+                        height: '50px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                  </div>
                   <span
                     style={{
                       fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
@@ -355,19 +388,19 @@ export default function Hero() {
                 className="start-button"
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(2px)';
-                  e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4)';
+                  e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4), 0 0 3px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.3)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)';
+                  e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3), 0 0 3px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.3)';
                 }}
                 onMouseDown={(e) => {
                   e.currentTarget.style.transform = 'translateY(2px)';
-                  e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4)';
+                  e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4), 0 0 3px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.3)';
                 }}
                 onMouseUp={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)';
+                  e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3), 0 0 3px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.3)';
                 }}
                 style={{
                   background: 'linear-gradient(180deg, #ff69b4 0%, #e04a9a 100%)',
@@ -379,8 +412,7 @@ export default function Hero() {
                   fontWeight: 700,
                   fontFamily: 'var(--font-rubik), Rubik, sans-serif',
                   cursor: 'pointer',
-                  boxShadow: 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)',
-                  filter: 'drop-shadow(0 0 3px rgba(255, 105, 180, 0.8)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.5)) drop-shadow(0 0 30px rgba(255, 105, 180, 0.3))',
+                  boxShadow: 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3), 0 0 3px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.5), 0 0 30px rgba(255, 105, 180, 0.3)',
                   transition: 'all 0.2s ease',
                   width: '100%',
                   boxSizing: 'border-box',
@@ -436,7 +468,7 @@ export default function Hero() {
                 lineHeight: 0,
                 transform: 'scale(0.55)',
                 transformOrigin: 'center center',
-                filter: 'drop-shadow(0 0 10px rgba(88, 192, 226, 0.6)) drop-shadow(0 0 20px rgba(88, 192, 226, 0.4))',
+                boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
               }}>
                 <PhoneMockup>
                   <Image
