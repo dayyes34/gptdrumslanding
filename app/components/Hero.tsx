@@ -39,7 +39,7 @@ export default function Hero() {
         {/* Шапка hero-top.webp */}
         <div 
           className="hero-top-container"
-          style={{ width: '100%', lineHeight: 0, position: 'relative', marginBottom: '-100px', zIndex: 20 }}
+          style={{ width: '100%', lineHeight: 0, position: 'relative', marginBottom: '0', zIndex: 20 }}
         >
           <div style={{ position: 'relative' }}>
             <Image
