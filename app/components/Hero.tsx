@@ -96,6 +96,7 @@ export default function Hero() {
             position: 'relative',
             zIndex: 10,
             marginTop: '90px',
+            overflow: 'visible',
           }}
         >
           {/* Декоративные изображения */}
@@ -212,6 +213,7 @@ export default function Hero() {
               paddingRight: '0px',
               position: 'relative',
               zIndex: 10,
+              overflow: 'visible',
             }}
           >
             {/* Контейнер с иконками и кнопкой */}
@@ -222,6 +224,7 @@ export default function Hero() {
                 justifyContent: 'center',
                 flex: 1,
                 minWidth: 0,
+                overflow: 'visible',
               }}
             >
               {/* Иконки-бейджики */}
@@ -232,6 +235,8 @@ export default function Hero() {
                   alignItems: 'flex-start',
                   gap: '10px',
                   flexWrap: 'wrap',
+                  overflow: 'visible',
+                  padding: '20px',
                 }}
               >
                 {/* Бейджик 2 */}
@@ -416,6 +421,7 @@ export default function Hero() {
                 position: 'relative',
                 width: '200px',
                 height: '300px',
+                padding: '30px',
               }}
             >
               <div style={{ 
