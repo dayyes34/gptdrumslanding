@@ -182,7 +182,7 @@ export default function Hero() {
               textShadow: '0 2px 10px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.2), 0 0 20px rgba(88, 192, 226, 0.4), 0 0 40px rgba(88, 192, 226, 0.2)',
             }}
           >
-            Барабань как хочешь, а не как можешь!
+            Умный ассистент барабанщика
           </h1>
           <h2
             style={{
@@ -198,7 +198,7 @@ export default function Hero() {
               textShadow: '0 0 15px rgba(255, 50, 0, 0.7), 0 0 30px rgba(255, 50, 0, 0.3)',
             }}
           >
-            Умный ассистент барабанщика
+            Барабань как хочешь, <br />а не как можешь!
           </h2>
 
           {/* Внешний контейнер для разделения пространства */}
@@ -234,7 +234,6 @@ export default function Hero() {
                   justifyContent: 'center',
                   alignItems: 'flex-start',
                   gap: '10px',
-                  flexWrap: 'wrap',
                   overflow: 'visible',
                   padding: '20px',
                 }}
@@ -248,29 +247,17 @@ export default function Hero() {
                     gap: '8px',
                   }}
                 >
-                  <div
+                  <Image
+                    src="/15min.webp"
+                    alt="Всего 15 минут"
+                    width={90}
+                    height={90}
                     style={{
                       width: '45px',
                       height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
-                      borderRadius: '8px',
+                      objectFit: 'contain',
                     }}
-                  >
-                    <Image
-                      src="/15min.webp"
-                      alt="Всего 15 минут"
-                      width={90}
-                      height={90}
-                      style={{
-                        width: '45px',
-                        height: '50px',
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </div>
+                  />
                   <span
                     style={{
                       fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
@@ -294,29 +281,17 @@ export default function Hero() {
                     gap: '8px',
                   }}
                 >
-                  <div
+                  <Image
+                    src="/11k.webp"
+                    alt="10000+ drummers"
+                    width={95}
+                    height={95}
                     style={{
                       width: '50px',
                       height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
-                      borderRadius: '8px',
+                      objectFit: 'contain',
                     }}
-                  >
-                    <Image
-                      src="/11k.webp"
-                      alt="10000+ drummers"
-                      width={95}
-                      height={95}
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </div>
+                  />
                   <span
                     style={{
                       fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
@@ -341,29 +316,17 @@ export default function Hero() {
                     gap: '8px',
                   }}
                 >
-                  <div
+                  <Image
+                    src="/aipowered.webp"
+                    alt="AI Powered"
+                    width={95}
+                    height={95}
                     style={{
                       width: '49px',
                       height: '50px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
-                      borderRadius: '8px',
+                      objectFit: 'contain',
                     }}
-                  >
-                    <Image
-                      src="/aipowered.webp"
-                      alt="AI Powered"
-                      width={95}
-                      height={95}
-                      style={{
-                        width: '49px',
-                        height: '50px',
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </div>
+                  />
                   <span
                     style={{
                       fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
@@ -468,7 +431,6 @@ export default function Hero() {
                 lineHeight: 0,
                 transform: 'scale(0.55)',
                 transformOrigin: 'center center',
-                boxShadow: '0 0 10px rgba(88, 192, 226, 0.6), 0 0 20px rgba(88, 192, 226, 0.4)',
               }}>
                 <PhoneMockup>
                   <Image
