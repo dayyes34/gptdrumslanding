@@ -76,7 +76,7 @@ export default function Hero() {
           <div
             style={{
               background: 'linear-gradient(to bottom, #13154A 0%, #000427 100%)',
-              padding: '23px 10px 60px',
+              padding: '23px 10px 0px',
               textAlign: 'center',
               position: 'relative',
               zIndex: 10,
@@ -106,7 +106,7 @@ export default function Hero() {
                 fontWeight: 600,
                 fontSize: '18px',
                 margin: 0,
-                marginBottom: '1.5rem',
+                marginBottom: '5.5rem',
                 lineHeight: 1.3,
                 position: 'relative',
                 zIndex: 10,

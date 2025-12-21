@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import WhyGptDrums from './components/WhyGptDrums'
 import About from './components/About'
 import BeforeAfter from './components/BeforeAfter'
 import HowItWorks from './components/HowItWorks'
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <WhyGptDrums />
       <About />
       <BeforeAfter />
       <HowItWorks />
