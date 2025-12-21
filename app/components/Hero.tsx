@@ -10,6 +10,7 @@ export default function Hero() {
       style={{
         paddingTop: 0,
         position: 'relative',
+        background: '#000427',
       }}
     >
       {/* Фиксированный фон spacebg.webp */}
@@ -55,19 +56,19 @@ export default function Hero() {
               zIndex: 20,
             }}
           />
-          {/* Градиентный overlay для плавного фейда hero-top в фон */}
-          <div
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: '10%',
-              background: 'linear-gradient(to bottom, transparent 0%, rgba(13, 16, 66, 0.5) 50%, #0D1042 100%)',
-              pointerEvents: 'none',
-              zIndex: '60'
-            }}
-          />
+            {/* Градиентный overlay для плавного фейда hero-top в фон */}
+            <div
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: '10%',
+                background: 'linear-gradient(to bottom, transparent 0%, #0D1042 100%)',
+                pointerEvents: 'none',
+                zIndex: '60'
+              }}
+            />
         </div>
 
         {/* Голубое свечение-туманность за текстовым блоком */}
@@ -90,8 +91,9 @@ export default function Hero() {
         {/* Темно-фиолетовый блок с текстом */}
         <div
           style={{
-            background: 'linear-gradient(to bottom, #0D1042 0%,rgb(0, 4, 39) 100%)',
-            padding: '23px 10px 60px',
+            background: 'linear-gradient(to bottom, #0D1042 0%, #000427 100%)',
+            padding: '23px 10px 120px',
+            marginBottom: '0',
             textAlign: 'center',
             position: 'relative',
             zIndex: 10,
