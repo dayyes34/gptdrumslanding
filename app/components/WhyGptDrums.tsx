@@ -1,9 +1,11 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function WhyGptDrums() {
   return (
     <section id="whygptdrums" style={{ padding: '40px 20px', position: 'relative' }}>
-      {/* Фон секции */}
+      {/* Фон секции - изображение whybg.webp */}
       <div
         style={{
           position: 'absolute',
@@ -11,21 +13,27 @@ export default function WhyGptDrums() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(to bottom, #BFE0F6 0%, #8FBDDB 100%)',
-          zIndex: 2,
+          width: '100%',
+          height: '100%',
+          zIndex: 1,
         }}
-      />
+      >
+        <Image
+          src="/whybg.webp"
+          alt="Background"
+          fill
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+          priority
+        />
+      </div>
       
-      {/* SVG волна сверху секции как шапка */}
+      {/* SVG волна скрыта */}
       <div
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          lineHeight: 0,
-          zIndex: 1,
-          marginTop: '-150px',
+          display: 'none',
         }}
       >
         <svg

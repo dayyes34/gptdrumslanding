@@ -5,17 +5,10 @@ import Image from 'next/image'
 export default function About() {
   return (
     <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #010319 0%, #0F1347 100%)', position: 'relative', zIndex: 1 }}>
-      {/* SVG волна сверху секции как шапка (перевернутая для стыковки) */}
+      {/* SVG волна скрыта */}
       <div
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          lineHeight: 0,
-          zIndex: 0,
-          marginTop: '-100px',
-          transform: 'scaleY(-1)',
+          display: 'none',
         }}
       >
         <svg
@@ -45,7 +38,7 @@ export default function About() {
         </svg>
       </div>
 
-      <div style={{ padding: '40px 20px', position: 'relative', zIndex: 2, paddingTop: '300px' }}>
+      <div style={{ padding: '40px 20px', position: 'relative', zIndex: 2, paddingTop: '40px' }}>
         {/* Заголовок */}
       <h2
         style={{
