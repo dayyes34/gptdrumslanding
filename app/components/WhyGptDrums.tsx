@@ -2,33 +2,17 @@
 
 import Image from 'next/image'
 
+const points = [
+  'Стать барабанщиком, который может сыграть ВСЕ',
+  'Свободно импровизировать',
+  'Прокачать мозг и конечности до PRO-уровня',
+  'Развиваться равномерно и сбалансированно',
+  'Сделать все это быстро и без напряжения',
+]
+
 export default function WhyGptDrums() {
   return (
     <section id="whygptdrums" style={{ padding: '40px 20px', position: 'relative' }}>
-      {/* Фон секции - изображение whybg.webp */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 1,
-        }}
-      >
-        <Image
-          src="/whybg.webp"
-          alt="Background"
-          fill
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-          }}
-          priority
-        />
-      </div>
       
       {/* SVG волна скрыта */}
       <div
@@ -85,7 +69,7 @@ export default function WhyGptDrums() {
             fontSize: 'clamp(1rem, 4vw, 1.2rem)',
             fontFamily: 'var(--font-rubik), Rubik, sans-serif',
             lineHeight: 1.6,
-            marginBottom: '1.5rem',
+            marginBottom: '0.75rem',
           }}
         >
           Если ты хочешь:
@@ -95,97 +79,98 @@ export default function WhyGptDrums() {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '1rem',
+            gap: '0',
             marginBottom: '2rem',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '0.75rem',
-              color: 'white',
-              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              lineHeight: 1.6,
-            }}
-          >
-            <span style={{ fontSize: '1.2em', flexShrink: 0 }}>✅</span>
-            <span>Стать барабанщиком, который может сыграть ВСЕ</span>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '0.75rem',
-              color: 'white',
-              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              lineHeight: 1.6,
-            }}
-          >
-            <span style={{ fontSize: '1.2em', flexShrink: 0 }}>✅</span>
-            <span>Свободно импровизировать</span>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '0.75rem',
-              color: 'white',
-              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              lineHeight: 1.6,
-            }}
-          >
-            <span style={{ fontSize: '1.2em', flexShrink: 0 }}>✅</span>
-            <span>Прокачать мозг и конечности до PRO-уровня</span>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '0.75rem',
-              color: 'white',
-              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              lineHeight: 1.6,
-            }}
-          >
-            <span style={{ fontSize: '1.2em', flexShrink: 0 }}>✅</span>
-            <span>Развиваться равномерно и сбалансированно</span>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '0.75rem',
-              color: 'white',
-              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              lineHeight: 1.6,
-            }}
-          >
-            <span style={{ fontSize: '1.2em', flexShrink: 0 }}>✅</span>
-            <span>Сделать все это быстро и без напряжения</span>
-          </div>
+          {points.map((point, index) => (
+            <div
+              key={index}
+              style={{
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                gap: '0.75rem',
+              }}
+            >
+              <Image
+                src="/tick.webp"
+                alt="Tick"
+                width={80}
+                height={80}
+                style={{
+                  width: 'auto',
+                  height: 'clamp(55px, 9vw, 80px)',
+                  objectFit: 'contain',
+                  flexShrink: 0,
+                }}
+              />
+              <div
+                style={{
+                  position: 'relative',
+                  flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Image
+                  src="/whypoints.webp"
+                  alt="Point"
+                  width={800}
+                  height={100}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'contain',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    color: '#000',
+                    fontSize: 'clamp(1rem, 4vw, 1.2rem)',
+                    fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                    lineHeight: 1.2,
+                    textAlign: 'left',
+                    width: '90%',
+                    paddingLeft: '5%',
+                    paddingRight: '5%',
+                  }}
+                >
+                  {point}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <p
+        <div
           style={{
-            color: 'white',
-            fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-            fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-            lineHeight: 1.6,
-            fontWeight: 600,
+            width: '100vw',
+            marginLeft: 'calc(-50vw + 50%)',
+            marginRight: 'calc(-50vw + 50%)',
+            marginTop: '1rem',
+            lineHeight: 0,
           }}
         >
-          Тогда...
-        </p>
+          <Image
+            src="/then.webp"
+            alt="Then"
+            width={1920}
+            height={200}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+        </div>
       </div>
     </section>
   )
