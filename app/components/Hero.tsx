@@ -91,7 +91,7 @@ export default function Hero() {
                 fontWeight: 800,
                 fontSize: 'clamp(2rem, 8vw, 3rem)',
                 margin: 0,
-                marginBottom: '0.5rem',
+                marginBottom: '1.5rem',
                 lineHeight: 1.3,
                 position: 'relative',
                 zIndex: 10,
