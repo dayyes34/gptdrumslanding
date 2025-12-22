@@ -10,6 +10,7 @@ import AdditionalFeatures from './components/AdditionalFeatures'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import FAQ from './components/FAQ'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
@@ -20,12 +21,11 @@ export default function Home() {
       <BeforeAfter />
       <HowItWorks />
       <AccelerateProgress />
-      <AI />
       <GetStarted />
-      <AdditionalFeatures />
       <Pricing />
       <CTA />
       <FAQ />
+      <Footer />
     </main>
   )
 }
