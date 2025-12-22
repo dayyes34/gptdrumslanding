@@ -90,7 +90,7 @@ export default function Hero() {
                 fontWeight: 800,
                 fontSize: 'clamp(2rem, 8vw, 3rem)',
                 margin: 0,
-                marginBottom: '-2rem',
+                marginBottom: '1.5rem',
                 lineHeight: 1.3,
                 position: 'relative',
                 zIndex: 10,
@@ -100,183 +100,256 @@ export default function Hero() {
               <span style={{ color: '#ff9d00', textShadow: '0 0 15px rgba(255, 50, 0, 0.7), 0 0 30px rgba(255, 50, 0, 0.3)' }}>барабанщика</span>
             </h1>
 
-            {/* Контейнер с мокапом слева и бейджиками справа */}
-            <div style={{ 
-              display: 'flex', 
-              flexDirection: 'row', 
-              alignItems: 'center', 
-              justifyContent: 'flex-start',
-              gap: '0rem',
-              position: 'relative', 
-              zIndex: 10,
-              flexWrap: 'wrap',
-            }}>
-              {/* PhoneMockup слева */}
-              <div style={{ 
+            {/* Внешний контейнер для разделения пространства */}
+            <div
+              style={{
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                transform: 'scale(0.6)',
-                transformOrigin: 'left center',
-                marginLeft: '3.5rem',
-                marginRight: '-2rem',
-              }}>
-                <PhoneMockup>
-                  <div></div>
-                </PhoneMockup>
-              </div>
-
-              {/* Бейджики справа - друг над другом */}
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '2.5rem',
-                alignItems: 'flex-start',
-              }}>
-                {/* Бейджик 1 - aipowered */}
-                <div style={{
+                flexDirection: 'row',
+                marginTop: '0px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                paddingLeft: '20px',
+                paddingRight: '0px',
+                position: 'relative',
+                zIndex: 10,
+              }}
+            >
+              {/* Контейнер с иконками и кнопкой */}
+              <div
+                style={{
                   display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  gap: '0.75rem',
-                }}>
-                  <Image
-                    src="/aipowered.webp"
-                    alt="AI Powered"
-                    width={95}
-                    height={95}
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  flex: 1,
+                  marginTop: '-45px',
+                  minWidth: 0,
+                }}
+              >
+                {/* Иконки-бейджики в ряд */}
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'flex-start',
+                    gap: '16px',
+                    flexWrap: 'wrap',
+                  }}
+                >
+                  {/* Бейджик 1 - 15min */}
+                  <div
                     style={{
-                      width: '50px',
-                      height: '50px',
-                      objectFit: 'contain',
-                    }}
-                  />
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      color: 'white',
-                      fontSize: '12px',
                       display: 'flex',
+                      flexDirection: 'column',
                       alignItems: 'center',
-                      justifyContent: 'center',
+                      gap: '8px',
                     }}
                   >
-                    AI Powered
-                  </span>
+                    <Image
+                      src="/15min.webp"
+                      alt="Всего 15 минут"
+                      width={90}
+                      height={90}
+                      style={{
+                        width: '45px',
+                        height: '50px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        color: 'white',
+                        fontSize: '12px',
+                        textAlign: 'center',
+                        display: 'block',
+                        lineHeight: '1.3',
+                        whiteSpace: 'pre-line',
+                      }}
+                    >
+                      15 минут <br />в день
+                    </span>
+                  </div>
+
+                  {/* Бейджик 2 - 11k */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: '8px',
+                    }}
+                  >
+                    <Image
+                      src="/11k.webp"
+                      alt="10000+ drummers"
+                      width={95}
+                      height={95}
+                      style={{
+                        width: '50px',
+                        height: '50px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        color: 'white',
+                        fontSize: '12px',
+                        textAlign: 'center',
+                        display: 'block',
+                        lineHeight: '1.3',
+                        whiteSpace: 'pre-line',
+                      }}
+                    >
+                      10000+ <br />drummers
+                    </span>
+                  </div>
+
+                  {/* Бейджик 3 - aipowered */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: '8px',
+                    }}
+                  >
+                    <Image
+                      src="/aipowered.webp"
+                      alt="AI Powered"
+                      width={95}
+                      height={95}
+                      style={{
+                        width: '49px',
+                        height: '50px',
+                        objectFit: 'contain',
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        color: 'white',
+                        fontSize: '12px',
+                        textAlign: 'center',
+                        display: 'block',
+                        lineHeight: '1.3',
+                      }}
+                    >
+                      AI Powered
+                    </span>
+                  </div>
                 </div>
 
-                {/* Бейджик 2 - 11k */}
-                <div style={{
+                {/* Кнопка Начать */}
+                <button
+                  className="start-button"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(2px)';
+                    e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)';
+                  }}
+                  onMouseDown={(e) => {
+                    e.currentTarget.style.transform = 'translateY(2px)';
+                    e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4)';
+                  }}
+                  onMouseUp={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)';
+                  }}
+                  style={{
+                    background: 'linear-gradient(180deg, #ff69b4 0%, #e04a9a 100%)',
+                    color: '#ffffff',
+                    border: 'none',
+                    borderRadius: '12px',
+                    padding: '18px 40px',
+                    fontSize: '20px',
+                    fontWeight: 700,
+                    fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                    cursor: 'pointer',
+                    boxShadow: 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)',
+                    filter: 'drop-shadow(0 0 3px rgba(255, 105, 180, 0.8)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.5)) drop-shadow(0 0 30px rgba(255, 105, 180, 0.3))',
+                    transition: 'all 0.2s ease',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                    transform: 'translateY(0)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    outline: 'none',
+                    marginTop: '30px',
+                  }}
+                >
+                  Начать
+                </button>
+              </div>
+              
+              {/* Мокап контейнер справа */}
+              <div
+                style={{
+                  flex: 1,
+                  minWidth: 0,
                   display: 'flex',
-                  flexDirection: 'row',
+                  justifyContent: 'center',
                   alignItems: 'center',
-                  gap: '0.75rem',
-                }}>
-                  <Image
-                    src="/11k.webp"
-                    alt="10000+ drummers"
-                    width={95}
-                    height={95}
-                    style={{
-                      width: '50px',
-                      height: '50px',
-                      objectFit: 'contain',
-                    }}
-                  />
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      color: 'white',
-                      fontSize: '12px',
-                      display: 'block',
-                    }}
-                  >
-                    10000+ <br />drummers
-                  </span>
-                </div>
-
-                {/* Бейджик 3 - 15min */}
-                <div style={{
+                  paddingLeft: '0px',
+                  overflow: 'visible',
+                  position: 'relative',
+                  width: '200px',
+                  height: '300px',
+                }}
+              >
+                <div style={{ 
                   display: 'flex',
-                  flexDirection: 'row',
                   alignItems: 'center',
-                  gap: '0.75rem',
+                  justifyContent: 'center',
+                  width: '280px',
+                  height: '560px',
+                  padding: 0,
+                  marginLeft: '20px',
+                  marginTop: '-40px',
+                  lineHeight: 0,
+                  transform: 'scale(0.55)',
+                  transformOrigin: 'center center',
                 }}>
-                  <Image
-                    src="/15min.webp"
-                    alt="Всего 15 минут"
-                    width={90}
-                    height={90}
-                    style={{
-                      width: '45px',
-                      height: '50px',
-                      objectFit: 'contain',
-                    }}
-                  />
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-bebas-neue), Bebas Neue, sans-serif',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      color: 'white',
-                      fontSize: '12px',
-                      display: 'block',
-                    }}
-                  >
-                    Всего 15 <br />минут
-                  </span>
+                  <PhoneMockup>
+                    <div></div>
+                  </PhoneMockup>
                 </div>
               </div>
             </div>
             
-            {/* Кнопка действия */}
-            <div style={{ display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 10, marginTop: '-1rem', marginBottom: '5rem' }}>
-              <button
-                className="start-button"
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(2px)';
-                  e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)';
-                }}
-                onMouseDown={(e) => {
-                  e.currentTarget.style.transform = 'translateY(2px)';
-                  e.currentTarget.style.boxShadow = 'inset 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.4)';
-                }}
-                onMouseUp={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)';
-                }}
-                style={{
-                  background: 'linear-gradient(180deg, #ff69b4 0%, #e04a9a 100%)',
-                  color: '#ffffff',
-                  border: 'none',
-                  borderRadius: '12px',
-                  padding: '18px 40px',
-                  fontSize: '20px',
-                  fontWeight: 700,
-                  fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-                  cursor: 'pointer',
-                  boxShadow: 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 3px 0 rgba(0, 0, 0, 0.3)',
-                  filter: 'drop-shadow(0 0 3px rgba(255, 105, 180, 0.8)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.5)) drop-shadow(0 0 30px rgba(255, 105, 180, 0.3))',
-                  transition: 'all 0.2s ease',
-                  width: '100%',
-                  maxWidth: '300px',
-                  boxSizing: 'border-box',
-                  transform: 'translateY(0)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px',
-                  outline: 'none',
-                }}
-              >
-                Начать
-              </button>
+            {/* Широкий желтый бейдж под мокапом и кнопкой */}
+            <div
+              style={{
+                fontSize: 'clamp(0.95rem, 2vw, 1.15rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                color: '#ffd700',
+                textAlign: 'center',
+                lineHeight: 1.6,
+                marginTop: '-1rem',
+                marginBottom: '5rem',
+                padding: '0.25rem 1.5rem',
+                background: 'transparent',
+                border: '2px solid #ffd700',
+                borderRadius: '24px',
+                fontWeight: 600,
+                maxWidth: '600px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                position: 'relative',
+                zIndex: 10,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Подходит новичкам и профи!
             </div>
           </div>
         </div>
