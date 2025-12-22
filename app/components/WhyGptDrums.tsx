@@ -69,8 +69,8 @@ export default function WhyGptDrums() {
             color: '#ff9d00',
             fontSize: 'clamp(1rem, 4vw, 1.2rem)',
             fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-            lineHeight: 1.6,
-            marginBottom: '0.75rem',
+            lineHeight: 2.6,
+            marginBottom: '1.75rem',
           }}
         >
           Если ты хочешь:
