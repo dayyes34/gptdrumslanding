@@ -234,7 +234,10 @@ export default function HowItWorks() {
       <section
         id="howitworks"
         style={{
-          background: 'linear-gradient(to bottom,rgb(0, 0, 0) 0%, #000215 100%)',
+          backgroundImage: 'url(/hiwbg.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
           padding: '0 0 2rem 0',
           marginTop: '0px',
           position: 'relative',
@@ -299,7 +302,7 @@ export default function HowItWorks() {
                   transform: 'translateZ(20px)',
                 }}
               >
-                Проще не<br />придумать!
+                Как это<br />работает?
               </h2>
             </div>
           </div>
