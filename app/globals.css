@@ -40,12 +40,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000427;
+  background: transparent;
   min-height: 100vh;
 }
 
 html {
-  background: #000427;
+  background: transparent;
 }
 
 #hero {
