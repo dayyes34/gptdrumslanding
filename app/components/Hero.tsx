@@ -277,7 +277,7 @@ export default function Hero() {
                     fontFamily: 'var(--font-rubik), Rubik, sans-serif',
                     cursor: 'pointer',
                     boxShadow: 'inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 0, 0, 0.3)',
-                    filter: 'drop-shadow(0 0 1px rgba(255, 105, 180, 0.8)) drop-shadow(0 0 10px rgba(255, 105, 180, 0.5)) drop-shadow(0 0 30px rgba(255, 105, 180, 0.3))',
+                    
                     transition: 'all 0.2s ease',
                     width: '100%',
                     boxSizing: 'border-box',
