@@ -171,12 +171,13 @@ export default function About() {
             width: '100%',
             height: '1px',
             background: 'rgba(255, 255, 255, 0.2)',
-            marginBottom: '2rem',
+            marginBottom: '0',
           }}
         />
 
         {/* Сравнение с названиями над картинками */}
-        <div>
+        <div style={{ background: 'rgba(0, 0, 0, 0.2)', padding: '2rem 0', marginBottom: '0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+          <div style={{ padding: '0 20px', maxWidth: '100%' }}>
           {/* Заголовок сравнения - названия со стрелкой */}
           <div
             style={{
@@ -268,25 +269,27 @@ export default function About() {
               />
             </div>
           </div>
-        </div>
 
-        {/* Желтая текстовая плашка по центру */}
-        <div
-          style={{
-            background: '#ffd700',
-            color: '#000',
-            padding: '8px 16px',
-            borderRadius: '6px',
-            textAlign: 'center',
-            fontSize: '0.9rem',
-            fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-            fontWeight: 600,
-            margin: '0 auto',
-            maxWidth: '300px',
-            marginBottom: '3rem',
-          }}
-        >
-          Быстрее и эффективнее
+          {/* Желтая текстовая плашка по центру */}
+          <div
+            style={{
+              background: '#ffd700',
+              color: '#000',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              textAlign: 'center',
+              fontSize: '0.9rem',
+              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+              fontWeight: 600,
+              margin: '0 auto',
+              maxWidth: '300px',
+              marginBottom: '3rem',
+            }}
+          >
+            Быстрее и эффективнее
+          </div>
+            </div>
+          </div>
         </div>
 
         {/* Второе сравнение: Ноты - живые паттерны */}
@@ -296,9 +299,11 @@ export default function About() {
               width: '100%',
               height: '1px',
               background: 'rgba(255, 255, 255, 0.2)',
-              marginBottom: '2rem',
+              marginBottom: '0',
             }}
           />
+          <div style={{ background: 'transparent', padding: '2rem 0', marginBottom: '0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+            <div style={{ padding: '0 20px', maxWidth: '100%' }}>
           <div
             style={{
               display: 'flex',
@@ -401,6 +406,8 @@ export default function About() {
           >
             Проще и понятнее
           </div>
+            </div>
+          </div>
         </div>
 
         {/* Третье сравнение: Перекосы - Симметрия */}
@@ -410,9 +417,11 @@ export default function About() {
               width: '100%',
               height: '1px',
               background: 'rgba(255, 255, 255, 0.2)',
-              marginBottom: '2rem',
+              marginBottom: '0',
             }}
           />
+          <div style={{ background: 'rgba(0, 0, 0, 0.2)', padding: '2rem 0', marginBottom: '0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+            <div style={{ padding: '0 20px', maxWidth: '100%' }}>
           <div
             style={{
               display: 'flex',
@@ -515,6 +524,8 @@ export default function About() {
           >
             Ровнее и стабильнее
           </div>
+            </div>
+          </div>
         </div>
 
         {/* Четвертое сравнение: Преподаватель - Карман */}
@@ -524,9 +535,11 @@ export default function About() {
               width: '100%',
               height: '1px',
               background: 'rgba(255, 255, 255, 0.2)',
-              marginBottom: '2rem',
+              marginBottom: '0',
             }}
           />
+          <div style={{ background: 'transparent', padding: '2rem 0', marginBottom: '0', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+            <div style={{ padding: '0 20px', maxWidth: '100%' }}>
           <div
             style={{
               display: 'flex',
@@ -628,8 +641,9 @@ export default function About() {
           >
             Всегда с тобой
           </div>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
     </section>
   )
