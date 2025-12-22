@@ -415,6 +415,127 @@ export default function About() {
           />
         ))}
       </div>
+{/* Горизонтальный разделитель */}
+<div
+          style={{
+            width: '100%',
+            height: '1px',
+            background: 'rgba(255, 255, 255, 0.2)',
+            marginBottom: '0',
+          }}
+        />
+      {/* Контейнер внизу с покетом слева и текстом справа */}
+      <div style={{ padding: '40px 20px', position: 'relative', zIndex: 2 }}>
+        <div style={{ position: 'relative', marginTop: '3rem' }}>
+          <div
+            style={{
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              borderRadius: '12px',
+              padding: '12px 16px',
+              textAlign: 'right',
+            }}
+          >
+            <p
+              style={{
+                color: 'white',
+                fontSize: 'clamp(1rem, 3.5vw, 1.2rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                lineHeight: 1.6,
+                fontWeight: 200,
+                textAlign: 'right',
+                margin: 0,
+              }}
+            >
+              Я не учу играть
+              <br />
+              Я убираю то, что мешает
+              <br />
+              Остальное — сам!
+            </p>
+          </div>
+          <div
+            style={{
+              position: 'absolute',
+              left: '-40px',
+              top: '-100px',
+              scale: '0.75',
+              maxWidth: '200px',
+              width: 'auto',
+              pointerEvents: 'none',
+              zIndex: 10,
+            }}
+          >
+            {/* Голубое свечение за изображением */}
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '120%',
+                height: '120%',
+                background: 'radial-gradient(circle, rgba(129, 190, 222, 0.3) 0%, rgba(129, 190, 222, 0.2) 40%, transparent 70%)',
+                borderRadius: '50%',
+                filter: 'blur(30px)',
+                zIndex: 0,
+              }}
+            />
+            
+            <Image
+              src="/meetpocket.webp"
+              alt="Meet Pocket"
+              width={200}
+              height={150}
+              style={{
+                width: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+                position: 'relative',
+                zIndex: 1,
+              }}
+            />
+            
+            {/* Звездочки и точки поверх картинки */}
+            {[
+              { type: 'star', top: '20%', left: '25%' },
+              { type: 'dot', top: '35%', left: '75%' },
+              { type: 'star', top: '65%', left: '20%' },
+              { type: 'dot', top: '75%', left: '80%' },
+            ].map((spark, i) => (
+              spark.type === 'star' ? (
+                <div
+                  key={i}
+                  className="star-four-pointed"
+                  style={{
+                    position: 'absolute',
+                    top: spark.top,
+                    left: spark.left,
+                    zIndex: 2,
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                />
+              ) : (
+                <div
+                  key={i}
+                  style={{
+                    position: 'absolute',
+                    top: spark.top,
+                    left: spark.left,
+                    width: '3px',
+                    height: '3px',
+                    background: '#81BEDE',
+                    borderRadius: '50%',
+                    boxShadow: '0 0 6px #81BEDE, 0 0 12px #81BEDE',
+                    zIndex: 2,
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                />
+              )
+            ))}
+          </div>
+        </div>
+      </div>
       </div>
     </section>
   )
