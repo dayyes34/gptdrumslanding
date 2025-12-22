@@ -42,7 +42,7 @@ export default function Footer() {
               top: 0,
               left: 0,
               right: 0,
-              height: '100%',
+              height: '10%',
               background: 'linear-gradient(to bottom, #121546, transparent)',
               pointerEvents: 'none',
             }}
