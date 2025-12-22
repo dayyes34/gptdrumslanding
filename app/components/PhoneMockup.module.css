@@ -55,6 +55,8 @@
   align-items: center;
   justify-content: flex-start;
   padding-top: 0;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .phoneHomeButton {
