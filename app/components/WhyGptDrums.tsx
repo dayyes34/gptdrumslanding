@@ -98,7 +98,7 @@ export default function WhyGptDrums() {
            
           }}
         >
-          Зачем тебе <br />gptDrums?
+          Почему <br />gptDrums?
         </h2>
 
         <p
