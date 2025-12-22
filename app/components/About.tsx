@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #250F4C 0%,rgb(0, 0, 0) 100%)', position: 'relative', zIndex: 1, marginTop: '-90px' }}>
+    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #250F4C 0%,rgb(0, 0, 0) 100%)', position: 'relative', zIndex: 1, marginTop: '-85px' }}>
       {/* SVG волна скрыта */}
       <div
         style={{
