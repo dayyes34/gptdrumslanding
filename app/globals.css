@@ -161,3 +161,54 @@ html {
     0 2px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
+/* Анимации для свечения и звезд */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+/* Четырехконечная звезда */
+.star-four-pointed {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.star-four-pointed::before,
+.star-four-pointed::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #81BEDE;
+  box-shadow: 0 0 10px #81BEDE, 0 0 20px #81BEDE;
+}
+
+.star-four-pointed::before {
+  width: 12px;
+  height: 2px;
+}
+
+.star-four-pointed::after {
+  width: 2px;
+  height: 12px;
+}
+

@@ -45,40 +45,131 @@ export default function About() {
           color: 'white',
           fontSize: 'clamp(1.8rem, 6vw, 2.5rem)',
           fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-          fontWeight: 800,
+          fontWeight: 600,
           lineHeight: 1.2,
           marginTop: '90px',
           marginBottom: '2rem',
           textAlign: 'left',
         }}
       >
-        Знакомься - <span style={{ color: '#ffd700' }}>Покет!</span>
+        Знакомься — <span style={{ color: '#ffd700' }}>Покет!</span>
       </h2>
 
       {/* Контейнер с текстом */}
-      <div
-        style={{
-          background: 'rgba(255, 255, 255, 0.1)',
-          border: '1px solid rgba(255, 255, 255, 0.2)',
-          borderRadius: '12px',
-          padding: '20px',
-          marginBottom: '3rem',
-        }}
-      >
-        <p
+      <div style={{ position: 'relative', marginBottom: '3rem' }}>
+        <div
           style={{
-            color: 'white',
-            fontSize: 'clamp(1rem, 4vw, 1.2rem)',
-            fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-            lineHeight: 1.6,
-            textAlign: 'left',
-            margin: 0,
+            background: 'rgba(255, 255, 255, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            borderRadius: '12px',
+            padding: '12px 16px',
           }}
         >
-          Хочешь играть свободнее?
-          <br />
-          Я знаю короткий путь!
-        </p>
+          <p
+            style={{
+              color: 'white',
+              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
+              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+              lineHeight: 1.6,
+              textAlign: 'left',
+              margin: 0,
+            }}
+          >
+            Хочешь играть свободнее?
+            <br />
+            Я знаю короткий путь!
+          </p>
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            right: '-30px',
+            top: '-100px',
+            scale: '0.9',
+            maxWidth: '200px',
+            width: 'auto',
+            pointerEvents: 'none',
+            zIndex: 10,
+          }}
+        >
+          {/* Голубое свечение */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '120%',
+              height: '120%',
+              background: 'radial-gradient(circle, rgba(129, 190, 222, 0.6) 0%, rgba(129, 190, 222, 0.3) 40%, transparent 70%)',
+              borderRadius: '50%',
+              filter: 'blur(20px)',
+              zIndex: -1,
+              animation: 'pulse-glow 2s ease-in-out infinite',
+            }}
+          />
+          
+          <Image
+            src="/meetpocket.webp"
+            alt="Meet Pocket"
+            width={200}
+            height={150}
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '8px',
+              position: 'relative',
+              zIndex: 1,
+            }}
+          />
+          
+          {/* Звездочки и точки поверх картинки */}
+          {[
+            { type: 'star', top: '15%', left: '20%', delay: 0 },
+            { type: 'dot', top: '30%', left: '75%', delay: 0.2 },
+            { type: 'star', top: '50%', left: '15%', delay: 0.4 },
+            { type: 'dot', top: '65%', left: '80%', delay: 0.6 },
+            { type: 'star', top: '80%', left: '25%', delay: 0.8 },
+            { type: 'dot', top: '25%', left: '50%', delay: 1.0 },
+            { type: 'star', top: '70%', left: '60%', delay: 1.2 },
+            { type: 'dot', top: '45%', left: '85%', delay: 1.4 },
+            { type: 'dot', top: '10%', left: '60%', delay: 1.6 },
+          ].map((spark, i) => (
+            spark.type === 'star' ? (
+              <div
+                key={i}
+                className="star-four-pointed"
+                style={{
+                  position: 'absolute',
+                  top: spark.top,
+                  left: spark.left,
+                  animation: `sparkle ${1.5 + i * 0.2}s ease-in-out infinite`,
+                  animationDelay: `${spark.delay}s`,
+                  zIndex: 2,
+                  transform: 'translate(-50%, -50%)',
+                }}
+              />
+            ) : (
+              <div
+                key={i}
+                style={{
+                  position: 'absolute',
+                  top: spark.top,
+                  left: spark.left,
+                  width: '5px',
+                  height: '5px',
+                  background: '#81BEDE',
+                  borderRadius: '50%',
+                  boxShadow: '0 0 8px #81BEDE, 0 0 16px #81BEDE',
+                  animation: `sparkle ${1.3 + i * 0.2}s ease-in-out infinite`,
+                  animationDelay: `${spark.delay}s`,
+                  zIndex: 2,
+                  transform: 'translate(-50%, -50%)',
+                }}
+              />
+            )
+          ))}
+        </div>
       </div>
 
       {/* Часть со сравнениями */}
