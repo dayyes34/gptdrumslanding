@@ -12,6 +12,7 @@ const comparisonSections = [
     rightImage: '/ai.webp',
     rightImageAlt: 'ИИ-тренер',
     badgeText: 'Быстрее и эффективнее',
+    description: 'Продолжай где остановился в 1 клик',
     hasDarkBackground: true,
   },
   {
@@ -22,6 +23,7 @@ const comparisonSections = [
     rightImage: '/patterns.webp',
     rightImageAlt: 'Живые паттерны',
     badgeText: 'Проще и понятнее',
+    description: 'Не расшифровывай ноты, играй сразу',
     hasDarkBackground: false,
   },
   {
@@ -32,6 +34,7 @@ const comparisonSections = [
     rightImage: '/balanced.webp',
     rightImageAlt: 'Симметрия',
     badgeText: 'Ровнее и стабильнее',
+    description: 'Правая рука не убежит от левой',
     hasDarkBackground: true,
   },
   {
@@ -42,6 +45,7 @@ const comparisonSections = [
     rightImage: '/247.webp',
     rightImageAlt: 'Карман',
     badgeText: 'Всегда с тобой',
+    description: 'Достал - позанимался - убрал',
     hasDarkBackground: false,
   },
 ]
@@ -54,7 +58,8 @@ function ComparisonSection({
   leftImageAlt, 
   rightImage, 
   rightImageAlt, 
-  badgeText, 
+  badgeText,
+  description,
   hasDarkBackground 
 }: {
   leftTitle: string
@@ -64,6 +69,7 @@ function ComparisonSection({
   rightImage: string
   rightImageAlt: string
   badgeText: string
+  description: string
   hasDarkBackground: boolean
 }) {
   return (
@@ -191,11 +197,30 @@ function ComparisonSection({
               fontWeight: 600,
               margin: '0 auto',
               maxWidth: '60%',
-              marginBottom: '3rem',
+              marginBottom: description ? '1rem' : '2rem',
             }}
           >
             {badgeText}
           </div>
+
+          {/* Текстовая подпись под желтой плашкой */}
+          {description && (
+            <div
+              style={{
+                color: 'white',
+                fontSize: 'clamp(0.9rem, 3vw, 1.1rem)',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 500,
+                letterSpacing: '0.5px',
+                lineHeight: 1.5,
+                textAlign: 'center',
+                marginBottom: '0rem',
+                padding: '0 20px',
+              }}
+            >
+              {description}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -385,6 +410,7 @@ export default function About() {
             rightImage={section.rightImage}
             rightImageAlt={section.rightImageAlt}
             badgeText={section.badgeText}
+            description={section.description}
             hasDarkBackground={section.hasDarkBackground}
           />
         ))}
