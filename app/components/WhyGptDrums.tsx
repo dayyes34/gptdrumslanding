@@ -44,7 +44,7 @@ export default function WhyGptDrums() {
             left: 0,
             right: 0,
             height: '10%',
-            background: 'linear-gradient(to bottom, #03062A 0%, rgba(1, 4, 37, 0.1) 50%, transparent 100%)',
+            background: 'linear-gradient(to bottom, #010425 0%, rgba(1, 4, 37, 0.1) 50%, transparent 100%)',
             pointerEvents: 'none',
             zIndex: 2,
           }}
