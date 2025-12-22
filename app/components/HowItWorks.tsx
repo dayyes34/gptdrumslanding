@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import sequencerStyles from './SequencerMarquee.module.css'
+import { FaEye } from 'react-icons/fa'
+import { HiSpeakerWave } from 'react-icons/hi2'
+import { FaDrum } from 'react-icons/fa'
 
 // Фиксированные данные для звезд (чтобы не перегенерировались при каждом рендере)
 const FIXED_STARS = Array.from({ length: 20 }, (_, i) => ({
@@ -296,7 +299,7 @@ export default function HowItWorks() {
                   transform: 'translateZ(20px)',
                 }}
               >
-                Учи ритмы, <br />а не ноты!
+                Проще не<br />придумать!
               </h2>
             </div>
           </div>
@@ -514,6 +517,70 @@ export default function HowItWorks() {
             </div>
           </div>
         </div>
+        </div>
+
+        {/* Контейнер с тремя строками: Смотри, Слушай, Играй */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '60px',
+            right: '270px',
+            padding: '0.75rem 1rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.75rem',
+            alignItems: 'flex-start',
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '16px',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            zIndex: 20,
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              color: 'white',
+              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+              fontWeight: 400,
+            }}
+          >
+            <FaEye style={{ fontSize: '1.2rem', color: 'white' }} />
+            <span>Смотри</span>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              color: 'white',
+              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+              fontWeight: 400,
+            }}
+          >
+            <HiSpeakerWave style={{ fontSize: '1.2rem', color: 'white' }} />
+            <span>Слушай</span>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              color: 'white',
+              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+              fontWeight: 400,
+            }}
+          >
+            <FaDrum style={{ fontSize: '1.2rem', color: 'white' }} />
+            <span>Играй</span>
+          </div>
         </div>
       </section>
     </>
