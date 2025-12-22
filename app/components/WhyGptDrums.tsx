@@ -51,21 +51,22 @@ export default function WhyGptDrums() {
       <div style={{ position: 'relative', zIndex: 3, paddingTop: '0px' }}>
         <h2
           style={{
-            color: 'white',
-            fontSize: 'clamp(1.8rem, 6vw, 2.5rem)',
+            color: '#ff9d00',
+            fontSize: 'clamp(2.5rem, 8vw, 4rem)',
             fontFamily: 'var(--font-rubik), Rubik, sans-serif',
             fontWeight: 800,
             lineHeight: 1.2,
             marginBottom: '2rem',
-            textAlign: 'left',
+            textAlign: 'center',
+            textShadow: '0 0 15px rgba(255, 50, 0, 0.7), 0 0 30px rgba(255, 50, 0, 0.3)',
           }}
         >
-          Зачем тебе gptDrums?
+          Зачем тебе <br />gptDrums?
         </h2>
 
         <p
           style={{
-            color: 'white',
+            color: '#ff9d00',
             fontSize: 'clamp(1rem, 4vw, 1.2rem)',
             fontFamily: 'var(--font-rubik), Rubik, sans-serif',
             lineHeight: 1.6,

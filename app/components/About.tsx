@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #010319 0%, #0F1347 100%)', position: 'relative', zIndex: 1 }}>
+    <section id="about" style={{ padding: '0', background: 'linear-gradient(to bottom, #250F4C 0%,rgb(0, 0, 0) 100%)', position: 'relative', zIndex: 1, marginTop: '-90px' }}>
       {/* SVG волна скрыта */}
       <div
         style={{
@@ -47,6 +47,7 @@ export default function About() {
           fontFamily: 'var(--font-rubik), Rubik, sans-serif',
           fontWeight: 800,
           lineHeight: 1.2,
+          marginTop: '90px',
           marginBottom: '2rem',
           textAlign: 'left',
         }}
