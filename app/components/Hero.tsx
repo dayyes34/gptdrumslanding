@@ -319,6 +319,7 @@ export default function Hero() {
                         lineHeight: 0,
                         transform: 'scale(0.55)',
                         transformOrigin: 'center center',
+                        filter: 'drop-shadow(0 0 10px rgba(88, 192, 226, 0.6)) drop-shadow(0 0 20px rgba(88, 192, 226, 0.4))',
                       }}>
                         <PhoneMockup>
                           <div
