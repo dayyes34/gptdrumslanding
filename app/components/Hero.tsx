@@ -348,7 +348,7 @@ export default function Hero() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: '-1rem',
+                marginTop: '-2rem',
                 marginBottom: '5rem',
                 position: 'relative',
                 zIndex: 10,
@@ -362,7 +362,7 @@ export default function Hero() {
                 style={{
                   width: 'auto',
                   height: 'auto',
-                  maxWidth: '85%',
+                  maxWidth: '80%',
                   objectFit: 'contain',
                 }}
               />
