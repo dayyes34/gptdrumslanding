@@ -19,8 +19,8 @@ export default function Hero() {
         className="fixed-space-bg"
         style={{
           zIndex: 0,
-          backgroundImage: 'url(/spacebg.webp)',
-          backgroundSize: '110%',
+          backgroundImage: 'url(/spacebga.webp)',
+          backgroundSize: '130%',
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
           backgroundColor: '#000427',
