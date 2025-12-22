@@ -43,12 +43,12 @@ export default function About() {
       <h2
         style={{
           color: 'white',
-          fontSize: 'clamp(1.8rem, 6vw, 2.5rem)',
+          fontSize: 'clamp(1.5rem, 6vw, 2.5rem)',
           fontFamily: 'var(--font-rubik), Rubik, sans-serif',
           fontWeight: 600,
           lineHeight: 1.2,
           marginTop: '90px',
-          marginBottom: '2rem',
+          marginBottom: '1rem',
           textAlign: 'left',
         }}
       >
@@ -83,16 +83,16 @@ export default function About() {
         <div
           style={{
             position: 'absolute',
-            right: '-30px',
+            right: '-40px',
             top: '-100px',
-            scale: '0.9',
+            scale: '0.75',
             maxWidth: '200px',
             width: 'auto',
             pointerEvents: 'none',
             zIndex: 10,
           }}
         >
-          {/* Голубое свечение */}
+          {/* Голубое свечение за изображением */}
           <div
             style={{
               position: 'absolute',
@@ -104,8 +104,7 @@ export default function About() {
               background: 'radial-gradient(circle, rgba(129, 190, 222, 0.6) 0%, rgba(129, 190, 222, 0.3) 40%, transparent 70%)',
               borderRadius: '50%',
               filter: 'blur(20px)',
-              zIndex: -1,
-              animation: 'pulse-glow 2s ease-in-out infinite',
+              zIndex: 0,
             }}
           />
           
@@ -125,15 +124,10 @@ export default function About() {
           
           {/* Звездочки и точки поверх картинки */}
           {[
-            { type: 'star', top: '15%', left: '20%', delay: 0 },
-            { type: 'dot', top: '30%', left: '75%', delay: 0.2 },
-            { type: 'star', top: '50%', left: '15%', delay: 0.4 },
-            { type: 'dot', top: '65%', left: '80%', delay: 0.6 },
-            { type: 'star', top: '80%', left: '25%', delay: 0.8 },
-            { type: 'dot', top: '25%', left: '50%', delay: 1.0 },
-            { type: 'star', top: '70%', left: '60%', delay: 1.2 },
-            { type: 'dot', top: '45%', left: '85%', delay: 1.4 },
-            { type: 'dot', top: '10%', left: '60%', delay: 1.6 },
+            { type: 'star', top: '20%', left: '25%' },
+            { type: 'dot', top: '35%', left: '75%' },
+            { type: 'star', top: '65%', left: '20%' },
+            { type: 'dot', top: '75%', left: '80%' },
           ].map((spark, i) => (
             spark.type === 'star' ? (
               <div
@@ -143,8 +137,6 @@ export default function About() {
                   position: 'absolute',
                   top: spark.top,
                   left: spark.left,
-                  animation: `sparkle ${1.5 + i * 0.2}s ease-in-out infinite`,
-                  animationDelay: `${spark.delay}s`,
                   zIndex: 2,
                   transform: 'translate(-50%, -50%)',
                 }}
@@ -156,13 +148,11 @@ export default function About() {
                   position: 'absolute',
                   top: spark.top,
                   left: spark.left,
-                  width: '5px',
-                  height: '5px',
+                  width: '3px',
+                  height: '3px',
                   background: '#81BEDE',
                   borderRadius: '50%',
-                  boxShadow: '0 0 8px #81BEDE, 0 0 16px #81BEDE',
-                  animation: `sparkle ${1.3 + i * 0.2}s ease-in-out infinite`,
-                  animationDelay: `${spark.delay}s`,
+                  boxShadow: '0 0 6px #81BEDE, 0 0 12px #81BEDE',
                   zIndex: 2,
                   transform: 'translate(-50%, -50%)',
                 }}

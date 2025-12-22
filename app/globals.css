@@ -187,8 +187,8 @@ html {
 /* Четырехконечная звезда */
 .star-four-pointed {
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
 }
 
 .star-four-pointed::before,
@@ -199,16 +199,16 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #81BEDE;
-  box-shadow: 0 0 10px #81BEDE, 0 0 20px #81BEDE;
+  box-shadow: 0 0 6px #81BEDE, 0 0 12px #81BEDE;
 }
 
 .star-four-pointed::before {
-  width: 12px;
-  height: 2px;
+  width: 8px;
+  height: 1.5px;
 }
 
 .star-four-pointed::after {
-  width: 2px;
-  height: 12px;
+  width: 1.5px;
+  height: 8px;
 }
 
