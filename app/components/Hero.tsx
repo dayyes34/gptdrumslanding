@@ -349,7 +349,7 @@ export default function Hero() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 marginTop: '-2rem',
-                marginBottom: '5rem',
+                marginBottom: '1rem',
                 position: 'relative',
                 zIndex: 10,
               }}

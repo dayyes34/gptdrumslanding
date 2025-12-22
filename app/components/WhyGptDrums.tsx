@@ -12,7 +12,7 @@ const points = [
 
 export default function WhyGptDrums() {
   return (
-    <section id="whygptdrums" style={{ padding: '40px 20px', position: 'relative' }}>
+    <section id="whygptdrums" style={{ padding: '20px 20px 40px 20px', position: 'relative' }}>
       
       {/* SVG волна скрыта */}
       <div
