@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import PhoneMockup from './PhoneMockup'
+import LandingSequencer from './LandingSequencer'
 
 export default function Hero() {
   return (
@@ -90,7 +91,7 @@ export default function Hero() {
                 fontWeight: 800,
                 fontSize: 'clamp(2rem, 8vw, 3rem)',
                 margin: 0,
-                marginBottom: '1.5rem',
+                marginBottom: '0.5rem',
                 lineHeight: 1.3,
                 position: 'relative',
                 zIndex: 10,
@@ -306,23 +307,38 @@ export default function Hero() {
                   height: '300px',
                 }}
               >
-                <div style={{ 
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '280px',
-                  height: '560px',
-                  padding: 0,
-                  marginLeft: '20px',
-                  marginTop: '-40px',
-                  lineHeight: 0,
-                  transform: 'scale(0.55)',
-                  transformOrigin: 'center center',
-                }}>
-                  <PhoneMockup>
-                    <div></div>
-                  </PhoneMockup>
-                </div>
+                      <div style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '280px',
+                        height: '560px',
+                        padding: 0,
+                        marginLeft: '20px',
+                        marginTop: '-40px',
+                        lineHeight: 0,
+                        transform: 'scale(0.55)',
+                        transformOrigin: 'center center',
+                      }}>
+                        <PhoneMockup>
+                          <div
+                            style={{
+                              opacity: 1,
+                              transition: 'opacity 0.5s ease-out',
+                              width: '100%',
+                              height: '100%',
+                              scale: '1.18',
+                              paddingTop: '35px'
+                            }}
+                          >
+                            <LandingSequencer 
+                              isLoopActive={false} 
+                              isMuteActive={false}
+                              hideBpmControl={true}
+                            />
+                          </div>
+                        </PhoneMockup>
+                      </div>
               </div>
             </div>
             
