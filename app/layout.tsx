@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Rubik, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 
@@ -21,6 +21,16 @@ export const metadata: Metadata = {
   description: 'gptDrums landing page',
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  themeColor: '#000000',
+  colorScheme: 'dark',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -28,6 +38,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={`${rubik.variable} ${bebasNeue.variable}`}>
+      <head>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="mobile-web-app-capable" content="yes" />
+      </head>
       <body>{children}</body>
     </html>
   )
