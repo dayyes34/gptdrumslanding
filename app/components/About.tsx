@@ -101,9 +101,9 @@ export default function About() {
               transform: 'translate(-50%, -50%)',
               width: '120%',
               height: '120%',
-              background: 'radial-gradient(circle, rgba(129, 190, 222, 0.6) 0%, rgba(129, 190, 222, 0.3) 40%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(129, 190, 222, 0.3) 0%, rgba(129, 190, 222, 0.2) 40%, transparent 70%)',
               borderRadius: '50%',
-              filter: 'blur(20px)',
+              filter: 'blur(30px)',
               zIndex: 0,
             }}
           />
