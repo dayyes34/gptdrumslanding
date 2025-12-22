@@ -80,7 +80,7 @@ export default function WhyGptDrums() {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '0',
+            gap: '0.3rem',
             marginBottom: '2rem',
           }}
         >
