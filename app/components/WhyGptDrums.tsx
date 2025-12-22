@@ -6,8 +6,8 @@ const points = [
   'Стать барабанщиком, который может сыграть ВСË',
   'Свободно импровизировать',
   'Прокачать мозг и конечности до PRO-уровня',
-  'Развиваться равномерно и сбалансированно',
-  'Сделать всё это быстро и без напряжения',
+  'Развиться равномерно и сбалансированно',
+  'Сделать это быстро и без напряжения',
 ]
 
 export default function WhyGptDrums() {
@@ -104,7 +104,7 @@ export default function WhyGptDrums() {
         <p
           style={{
             color: '#ff9d00',
-            fontSize: 'clamp(1rem, 4vw, 1.2rem)',
+            fontSize: 'clamp(1.3rem, 4vw, 1.2rem)',
             fontFamily: 'var(--font-rubik), Rubik, sans-serif',
             lineHeight: 2.6,
             marginBottom: '1.75rem',
