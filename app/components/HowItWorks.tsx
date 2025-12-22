@@ -239,48 +239,6 @@ export default function HowItWorks() {
           overflow: 'visible',
         }}
       >
-        {/* Шапка hero-top.webp перевернутая вверху для стыковки с About */}
-        <div 
-          style={{ 
-            width: '100%', 
-            lineHeight: 0, 
-            position: 'relative', 
-            zIndex: 20,
-            transform: 'scaleY(-1)',
-          }}
-        >
-          <div style={{ position: 'relative' }}>
-            <Image
-              src="/hero-top.webp"
-              alt="HowItWorks Top"
-              width={1080}
-              height={200}
-              priority
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                position: 'relative',
-                zIndex: 20,
-              }}
-            />
-            {/* Градиентный overlay для плавного фейда сверху картинки в #0F1347 (картинка перевернута, поэтому overlay снизу) */}
-            <div
-              style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: '10%',
-                background: 'linear-gradient(to bottom, transparent 0%, #0F1347 100%)',
-                pointerEvents: 'none',
-                zIndex: 60
-              }}
-            />
-          </div>
-        </div>
-        
         <div style={{ padding: '0px 20px 0 20px' }}>
         {/* Звездочки - выключены */}
         {/* <div className="stars">
