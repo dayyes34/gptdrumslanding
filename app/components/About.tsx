@@ -68,9 +68,10 @@ export default function About() {
           <p
             style={{
               color: 'white',
-              fontSize: 'clamp(1rem, 4vw, 1.2rem)',
+              fontSize: 'clamp(1rem, 3.5vw, 1.2rem)',
               fontFamily: 'var(--font-rubik), Rubik, sans-serif',
               lineHeight: 1.6,
+              fontWeight: 200,
               textAlign: 'left',
               margin: 0,
             }}
