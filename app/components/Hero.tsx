@@ -342,30 +342,30 @@ export default function Hero() {
               </div>
             </div>
             
-            {/* Широкий желтый бейдж под мокапом и кнопкой */}
+            {/* Изображение fits.webp под мокапом и кнопкой */}
             <div
               style={{
-                fontSize: 'clamp(0.95rem, 2vw, 1.15rem)',
-                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-                color: '#ffd700',
-                textAlign: 'center',
-                lineHeight: 1.6,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginTop: '-1rem',
                 marginBottom: '5rem',
-                padding: '0.25rem 10px',
-                background: 'transparent',
-                border: '2px solid #ffd700',
-                borderRadius: '24px',
-                fontWeight: 600,
-                maxWidth: '70%',
-                marginLeft: 'auto',
-                marginRight: 'auto',
                 position: 'relative',
                 zIndex: 10,
-                whiteSpace: 'nowrap',
               }}
             >
-              Подходит новичкам и профи!
+              <Image
+                src="/fits.webp"
+                alt="Подходит новичкам и профи"
+                width={400}
+                height={100}
+                style={{
+                  width: 'auto',
+                  height: 'auto',
+                  maxWidth: '85%',
+                  objectFit: 'contain',
+                }}
+              />
             </div>
           </div>
         </div>
