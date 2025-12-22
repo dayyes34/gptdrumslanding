@@ -235,7 +235,7 @@ export default function HowItWorks() {
         id="howitworks"
         style={{
           background: 'linear-gradient(to bottom,rgb(0, 0, 0) 0%, #000215 100%)',
-          padding: '0 0 460px 0',
+          padding: '0 0 2rem 0',
           marginTop: '0px',
           position: 'relative',
           zIndex: 10,
@@ -522,64 +522,180 @@ export default function HowItWorks() {
         {/* Контейнер с тремя строками: Смотри, Слушай, Играй */}
         <div
           style={{
-            position: 'absolute',
-            bottom: '60px',
-            right: '270px',
-            padding: '0.75rem 1rem',
+            padding: '2rem 20px',
+            paddingTop: '15rem',
             display: 'flex',
-            flexDirection: 'column',
-            gap: '0.75rem',
-            alignItems: 'flex-start',
-            background: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '16px',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            zIndex: 20,
+            justifyContent: 'flex-start',
           }}
         >
           <div
             style={{
+              padding: '0.75rem 1rem',
               display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              color: 'white',
-              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              fontWeight: 400,
+              flexDirection: 'column',
+              gap: '0.75rem',
+              alignItems: 'flex-start',
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '16px',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
             }}
           >
-            <FaEye style={{ fontSize: '1.2rem', color: 'white' }} />
-            <span>Смотри</span>
-          </div>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                color: 'white',
+                fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                fontWeight: 400,
+              }}
+            >
+              <FaEye style={{ fontSize: '1.2rem', color: 'white' }} />
+              <span>Смотри</span>
+            </div>
 
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                color: 'white',
+                fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                fontWeight: 400,
+              }}
+            >
+              <HiSpeakerWave style={{ fontSize: '1.2rem', color: 'white' }} />
+              <span>Слушай</span>
+            </div>
+
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                color: 'white',
+                fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                fontWeight: 400,
+              }}
+            >
+              <FaDrum style={{ fontSize: '1.2rem', color: 'white' }} />
+              <span>Играй</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Плашки внизу */}
+        <div
+          style={{
+            padding: '3rem 20px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            maxWidth: '1200px',
+            margin: '0 auto',
+          }}
+        >
+          {/* Плашка 1: Видишь паттерн */}
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              color: 'white',
-              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              fontWeight: 400,
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '12px',
+              padding: '1rem 1.5rem',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
             }}
           >
-            <HiSpeakerWave style={{ fontSize: '1.2rem', color: 'white' }} />
-            <span>Слушай</span>
+            <div
+              style={{
+                color: 'white',
+                fontSize: 'clamp(1rem, 3vw, 1.3rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                fontWeight: 600,
+                marginBottom: '0.5rem',
+              }}
+            >
+              Видишь паттерн
+            </div>
+            <div
+              style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 400,
+                lineHeight: 1.5,
+              }}
+            >
+              Сразу понимаешь куда и когда бить
+            </div>
           </div>
 
+          {/* Плашка 2: Наушники = фокус */}
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              color: 'white',
-              fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
-              fontFamily: 'var(--font-rubik), Rubik, sans-serif',
-              fontWeight: 400,
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '12px',
+              padding: '1rem 1.5rem',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
             }}
           >
-            <FaDrum style={{ fontSize: '1.2rem', color: 'white' }} />
-            <span>Играй</span>
+            <div
+              style={{
+                color: 'white',
+                fontSize: 'clamp(1rem, 3vw, 1.3rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                fontWeight: 600,
+                marginBottom: '0.5rem',
+              }}
+            >
+              Наушники = фокус
+            </div>
+            <div
+              style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 400,
+                lineHeight: 1.5,
+              }}
+            >
+              Слышишь, как точно должен звучать ритм
+            </div>
+          </div>
+
+          {/* Плашка 3: Играй вместе */}
+          <div
+            style={{
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '12px',
+              padding: '1rem 1.5rem',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+            }}
+          >
+            <div
+              style={{
+                color: 'white',
+                fontSize: 'clamp(1rem, 3vw, 1.3rem)',
+                fontFamily: 'var(--font-rubik), Rubik, sans-serif',
+                fontWeight: 600,
+                marginBottom: '0.5rem',
+              }}
+            >
+              Играй вместе
+            </div>
+            <div
+              style={{
+                color: 'rgba(255, 255, 255, 0.8)',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 400,
+                lineHeight: 1.5,
+              }}
+            >
+              Повторяй пока не получится
+            </div>
           </div>
         </div>
       </section>
