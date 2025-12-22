@@ -98,7 +98,7 @@ export default function Hero() {
               }}
             >
               <span style={{ color: 'white' }}>Умный ассистент </span>
-              <span style={{ color: '#ff9d00', textShadow: '0 0 15px rgba(255, 50, 0, 0.7), 0 0 30px rgba(255, 50, 0, 0.3)' }}>барабанщика</span>
+              <span style={{ color: '#ff9d00' }}>барабанщика</span>
             </h1>
 
             {/* Внешний контейнер для разделения пространства */}

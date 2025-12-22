@@ -58,7 +58,7 @@ export default function WhyGptDrums() {
             lineHeight: 1.2,
             marginBottom: '2rem',
             textAlign: 'center',
-            textShadow: '0 0 15px rgba(255, 50, 0, 0.7), 0 0 30px rgba(255, 50, 0, 0.3)',
+           
           }}
         >
           Зачем тебе <br />gptDrums?
