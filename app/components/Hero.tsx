@@ -357,7 +357,7 @@ export default function Hero() {
                 border: '2px solid #ffd700',
                 borderRadius: '24px',
                 fontWeight: 600,
-                maxWidth: '80%',
+                maxWidth: '70%',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 position: 'relative',
