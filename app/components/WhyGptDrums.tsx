@@ -13,11 +13,11 @@ const points = [
 export default function WhyGptDrums() {
   return (
     <section id="whygptdrums" style={{ padding: '20px 20px 40px 20px', position: 'relative' }}>
-      {/* Фоновое изображение clouds.webp */}
+      {/* Фоновое изображение whybgg.webp */}
       <div
         style={{
           position: 'absolute',
-          top: 0,
+          top: -5,
           left: 0,
           right: 0,
           bottom: 0,
@@ -27,14 +27,27 @@ export default function WhyGptDrums() {
         }}
       >
         <Image
-          src="/clouds.webp"
-          alt="Clouds"
+          src="/whybgg.webp"
+          alt="whybg"
           fill
           style={{
             objectFit: 'cover',
             objectPosition: 'center',
           }}
           priority
+        />
+        {/* Плавный фейд в #010425 сверху */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: '10%',
+            background: 'linear-gradient(to bottom, #010425 0%, rgba(1, 4, 37, 0.1) 50%, transparent 100%)',
+            pointerEvents: 'none',
+            zIndex: 2,
+          }}
         />
       </div>
       
