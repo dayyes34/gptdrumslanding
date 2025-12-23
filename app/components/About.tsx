@@ -83,7 +83,7 @@ function ComparisonSection({
         }}
       />
       <div style={{ 
-        background: hasDarkBackground ? 'rgba(0, 0, 0, 0.2)' : 'transparent', 
+        background: hasDarkBackground ? '#120928' : '#201243', 
         padding: '2rem 0', 
         marginBottom: '0', 
         width: '100vw', 
@@ -425,7 +425,7 @@ export default function About() {
           }}
         />
       {/* Контейнер внизу с покетом слева и текстом справа */}
-      <div style={{ padding: '40px 20px', position: 'relative', zIndex: 2 }}>
+      <div style={{ padding: '40px 20px', position: 'relative', zIndex: 2, background: '#120928', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
         <div style={{ position: 'relative', marginTop: '3rem' }}>
           <div
             style={{

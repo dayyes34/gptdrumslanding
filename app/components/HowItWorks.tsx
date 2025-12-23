@@ -234,11 +234,11 @@ export default function HowItWorks() {
       <section
         id="howitworks"
         style={{
-          backgroundImage: 'url(/hiwbg.webp)',
+          backgroundImage: 'url(/whybeg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          padding: '0 0 2rem 0',
+          padding: '3rem 0 2rem 0',
           marginTop: '0px',
           position: 'relative',
           zIndex: 10,
@@ -262,6 +262,7 @@ export default function HowItWorks() {
           style={{
             maxWidth: '1200px',
             margin: '0 auto',
+
             position: 'relative',
             zIndex: 2,
             overflow: 'visible',
